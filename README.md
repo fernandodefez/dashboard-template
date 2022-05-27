@@ -11,3 +11,5 @@ This template has the following basic pages:
 
 
 If you would like to take a look at the template click the link below
+
+https://fernandodefez.github.io/dashboard-template
