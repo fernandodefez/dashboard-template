@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(311deg, rgba(255, 255, 255, 1) 66%, rgba(245, 247, 255, 1) 76%, rgba(241, 242, 254, 1) 82%, rgba(236, 237, 253, 1) 88%, rgba(223, 223, 240, 1) 96%, rgba(212, 211, 249, 1) 100%, rgba(188, 185, 247, 1) 100%);
+}
+
+* {
+    transition: 0.3s;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+#SideBarOverlay {
+    display: none;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    background: rgba(15, 15, 15, 0.4);
+    cursor: pointer;
+}
+
+#MobileSideBar {
+    display: none;
+    position: absolute;
+    z-index: 10;
+}
+
+#SideBarButton {
+    display: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+
+/** Switch Implementation */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 23px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #198754;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #198754;
+}
+
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.gradient-background {
+    /* background: rgb(124, 13, 65); */
+    background: linear-gradient(54deg, rgba(196, 5, 5, 1) 0%, rgba(202, 3, 118, 1) 25%, rgba(140, 1, 239, 1) 50%, rgba(99, 26, 247, 1) 75%, rgba(0, 48, 255, 1) 100%);
+}
+
+
+/* Hover for each list-group-item a (link) */
+.list-group-item a {
+    transition: 0.3s;
+}
+
+.list-group-item a:hover,
+.active {
+    background: #212529;
+    color: white !important;
+    font-weight: bolder;
+}
+
+
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+
+    #Main {
+        flex-direction: column;
+        height: 100%;
+        overflow: auto;
+    }
+
+    #Main section {
+        border: none !important;
+    }
+
+    #ModuleContent,
+    #Aside {
+        height: auto !important;
+        overflow: hidden !important;
+        border: 0 !important;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+
+    #SideBarButton {
+        display: block;
+    }
+
+    #SideBar {
+        width: 0;
+        padding: 0 !important;
+    }
+
+    .bi-three-dots-vertical {
+        display: none;
+    }
+
+    .dropdown .profile-name {
+        display: none !important;
+    }
+
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}
